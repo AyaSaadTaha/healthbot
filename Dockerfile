@@ -15,7 +15,5 @@ COPY --from=builder /app/target/healthbot-*.jar app.jar
 ENV MONGODB_URI="mongodb+srv://ayasaadtaha:pdkcMEi7G5cE33P3@telegramhealthbot.hdkqmdy.mongodb.net/?retryWrites=true&w=majority&appName=TelegramHealthBot"
 ENV BOT_TOKEN="7636548833:AAFT7TI7XtPWGAdrNi0YtGvFhcQZ_InuN5s"
 
-#EXPOSE 8080
-#ENTRYPOINT ["java", "-jar", "app.jar"]
 EXPOSE 8080
-ENTRYPOINT ["java", "-Dhttps.protocols=TLSv1.2", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
